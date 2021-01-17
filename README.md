@@ -30,9 +30,9 @@ EOF
 make build up
 make log
 
-> Attaching to simple-go-project-tempalte_app_1
+> Attaching to simple-go-project-template_app_1
 > app_1   | Hello, Go
-> simple-go-project-tempalte_app_1 exited with code 0
+> simple-go-project-template_app_1 exited with code 0
 ```
 
 아래의 명령어를 실행하면 실시간으로 코드에 변경사항이 적용되어 테스트 할 수 있는 (as hotreload)  서비스인 [reflex](https://github.com/cespare/reflex)  으로 `main.go`를 컨테이너 환경에서 실행할 수 있습니다. 
@@ -41,7 +41,7 @@ make log
 make watch
 
 > docker-compose run app reflex -r '\.go' -s -- sh -c "go run /build/main.go"
-> Creating simple-go-project-tempalte_app_run ... done
+> Creating simple-go-project-template_app_run ... done
 > [00] Starting service
 > [00] Hello, Go
 ```
@@ -60,7 +60,7 @@ func main() {
 ```bash
 # Terminal 2
 > docker-compose run app reflex -r '\.go' -s -- sh -c "go run /build/main.go"
-> Creating simple-go-project-tempalte_app_run ... done
+> Creating simple-go-project-template_app_run ... done
 > [00] Killing service
 > [00] Starting service
 > [00] Hello, Go. so Easy
@@ -76,12 +76,12 @@ func main() {
 make clean
 > docker-compose rm --all
 > WARNING: --all flag is obsolete. This is now the default behavior of `docker-compose rm`
- Going to remove simple-go-project-tempalte_app_run_70fc30e963c7, simple-go-project-tempalte_app_run_f78df5fd0e51, simple-go-project-tempalte_app_run_23fb859dba87, simple-go-project-tempalte_app_run_80252ad239d2, simple-go-project-tempalte_app_1
+ Going to remove simple-go-project-template_app_run_70fc30e963c7, simple-go-project-template_app_run_f78df5fd0e51, simple-go-project-template_app_run_23fb859dba87, simple-go-project-template_app_run_80252ad239d2, simple-go-project-template_app_1
 > Are you sure? [yN] y
-> Removing simple-go-project-tempalte_app_run_70fc30e963c7 ... done
-> Removing simple-go-project-tempalte_app_run_f78df5fd0e51 ... done
-> Removing simple-go-project-tempalte_app_run_23fb859dba87 ... done
-> Removing simple-go-project-tempalte_app_run_80252ad239d2 ... done
-> Removing simple-go-project-tempalte_app_1                ... done
+> Removing simple-go-project-template_app_run_70fc30e963c7 ... done
+> Removing simple-go-project-template_app_run_f78df5fd0e51 ... done
+> Removing simple-go-project-template_app_run_23fb859dba87 ... done
+> Removing simple-go-project-template_app_run_80252ad239d2 ... done
+> Removing simple-go-project-template_app_1                ... done
 ```
 
