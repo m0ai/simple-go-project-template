@@ -1,4 +1,4 @@
-# Simple Go Project Template
+# Simple Go Project Template (부제: Golang 설치 없이 빠르게 개발하기)
 
 이 저장소는 간단한 GO 프로젝트 템플릿 입니다. Go 개발팀의 의해 정의된 공식적인 표준은 아니지만 빠르고 간단하게 Go 프로젝트를 빌드하고 실행하기 위해 생성되었습니다.  사용자의 디바이스에서 Go의 대한 종속성을 제거하고 빠른 테스트를 위해 Docker를 사용하여 환경을 설정하였습니다. 해당 프로젝트보다 복잡하고 다양한 사람과의 협업을 통해 프로젝트를 진행하고자 한다면 [표준 GO 프로젝트 레이아웃](https://github.com/golang-standards/project-layout/blob/master/README_ko.md) 을 참고하여 개발을 권장합니다.
 
