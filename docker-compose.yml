@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  base:
+    build:
+      context: .
+      target: builder
+    working_dir: /build
+    volumes:
+      - .:/build
+
+  app:
+    extends:
+      service: base
+    command: go run /build/main.go
