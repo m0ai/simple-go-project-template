@@ -40,7 +40,6 @@ make log
 ```bash
 make watch
 
-> docker-compose run app reflex -r '\.go' -s -- sh -c "go run /build/main.go"
 > Creating simple-go-project-template_app_run ... done
 > [00] Starting service
 > [00] Hello, Go
@@ -59,11 +58,14 @@ func main() {
 
 ```bash
 # Terminal 2
-> docker-compose run app reflex -r '\.go' -s -- sh -c "go run /build/main.go"
+make watch
+
 > Creating simple-go-project-template_app_run ... done
-> [00] Killing service
 > [00] Starting service
-> [00] Hello, Go. so Easy
+> [00] Hello, Go. # Before 
+> [00] Killing service
+> [01] Starting service
+> [01] Hello, Go. so Easy # After
 ```
 
 
@@ -74,7 +76,6 @@ func main() {
 
 ```bash
 make clean
-> docker-compose rm --all
 > WARNING: --all flag is obsolete. This is now the default behavior of `docker-compose rm`
  Going to remove simple-go-project-template_app_run_70fc30e963c7, simple-go-project-template_app_run_f78df5fd0e51, simple-go-project-template_app_run_23fb859dba87, simple-go-project-template_app_run_80252ad239d2, simple-go-project-template_app_1
 > Are you sure? [yN] y
