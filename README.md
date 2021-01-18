@@ -24,7 +24,7 @@ go 1.15
 EOF
 ```
 
- makefile에 정의되어 있는 명령어를 실행하여 간편한게 앱을 실행할  수 있습니다.
+ makefile에 정의되어 있는 명령어를 실행하여 간편한게 앱을 실행할 수 있습니다.
 
 ```bash
 make build up
@@ -35,7 +35,7 @@ make log
 > simple-go-project-template_app_1 exited with code 0
 ```
 
-아래의 명령어를 실행하면 실시간으로 코드에 변경사항이 적용되어 테스트 할 수 있는 (as hotreload)  서비스인 [reflex](https://github.com/cespare/reflex)  으로 `main.go`를 컨테이너 환경에서 실행할 수 있습니다. 
+아래의 명령어를 실행하면 실시간으로 코드에 변경사항이 적용되어 테스트 할 수 있는 (like a hotreload)  서비스인 [reflex](https://github.com/cespare/reflex)  으로 `main.go`를 컨테이너 환경에서 실행할 수 있습니다.
 
 ```bash
 make watch
@@ -45,14 +45,14 @@ make watch
 > [00] Hello, Go
 ```
 
-`make watch`으로 앱을 실행한 후 main.go를 수정할 경우 실시간으로 로그가 업데이트 되는 모습을 확인할 수 있습니다.
+`make watch`으로 앱을 실행한 후 `main.go` 를 수정할 경우 실시간으로 결과가 업데이트 되는 모습을 확인할 수 있습니다.
 
 ```go
 // Terminal 1
 import "fmt"
 
 func main() {
-	fmt.Println("Hello, Go. so Easy") // Edited 
+	fmt.Println("Hello, Go. so Easy") // Edited
 }
 ```
 
@@ -62,7 +62,7 @@ make watch
 
 > Creating simple-go-project-template_app_run ... done
 > [00] Starting service
-> [00] Hello, Go. # Before 
+> [00] Hello, Go. # Before
 > [00] Killing service
 > [01] Starting service
 > [01] Hello, Go. so Easy # After
@@ -76,8 +76,8 @@ make watch
 
 ```bash
 make clean
-> WARNING: --all flag is obsolete. This is now the default behavior of `docker-compose rm`
- Going to remove simple-go-project-template_app_run_70fc30e963c7, simple-go-project-template_app_run_f78df5fd0e51, simple-go-project-template_app_run_23fb859dba87, simple-go-project-template_app_run_80252ad239d2, simple-go-project-template_app_1
+
+> Going to remove simple-go-project-template_app_run_70fc30e963c7, simple-go-project-template_app_run_f78df5fd0e51, simple-go-project-template_app_run_23fb859dba87, simple-go-project-template_app_run_80252ad239d2, simple-go-project-template_app_1
 > Are you sure? [yN] y
 > Removing simple-go-project-template_app_run_70fc30e963c7 ... done
 > Removing simple-go-project-template_app_run_f78df5fd0e51 ... done
